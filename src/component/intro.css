@@ -1,0 +1,98 @@
+.main-div{
+    display: flex;
+    height: 100vh;
+   
+}
+
+.left-div{
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 50%;
+}
+
+.intro{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.name{
+    font-size: 60px;
+}
+
+.left-wrapper{
+    padding: 50px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title{
+    height: 50px;
+    overflow: hidden;
+}
+
+.title-wrapper{
+    height: 100%;
+    animation: move 10s ease-in-out infinite alternate;
+}
+@keyframes move {
+    50%{ 
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(-100px);
+    }
+    
+}
+
+.title-item{
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(105, 47, 80);
+    display: flex;
+    align-items: center;
+}
+
+.right-div{
+flex: 1;
+position: relative;
+}
+
+.bg{
+    clip-path: polygon(100% 0%, 100% 49%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background-color: darkmagenta;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.img{
+    right: 0px;
+    top: 60px;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 480px) {
+    .main-div{
+        flex-direction: column;
+    }
+
+    .left-div{
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+    }
+}
